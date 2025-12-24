@@ -3,113 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บไซต์ส่วนตัวของฉัน</title>
+    <title>แนะนำตัวเอง</title>
+    
     <style>
+        /* --- ส่วนของ CSS (ตามคำสั่งในรูปที่ 2) --- */
+
+        /* 3. Element Selector: เปลี่ยนฟอนต์และสีพื้นหลังโดยรวม */
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #eef2f3;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            /* 6. text-align และ font-weight */
+            text-align: center;
+            font-weight: 800;
+            color: #2c3e50;
+        }
+
+        /* 5. ID Selector: กำหนดสไตล์ให้ส่วนหัวของเว็บ */
+        #main-header {
+            background-color: #ffffff;
+            padding: 20px;
+            border-bottom: 4px solid #3498db;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* 4. Class Selector: เน้นข้อความบางส่วนให้มีสีแตกต่าง */
+        .highlight {
+            color: #e74c3c;
+            background-color: #f9f900;
+            padding: 2px 5px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>นรินทร์ ไสวจำเนียรกุล</h1>
+
+    <header id="main-header">
+        <h1>ยินดีต้อนรับสู่โปรเจกต์ของฉัน นรินทร์ ไสวจำเนียรกุล </h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#">หน้าแรก</a></li>
+                <li><a href="#info">ข้อมูล</a></li>
+                <li><a href="#contact">ติดต่อ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">เกี่ยวกับฉัน</a></li>
-            <li><a href="#skills">ทักษะ</a></li>
-            <li><a href="#contact">ติดต่อ</a></li>
-        </ul>
-    </nav>
-
     <main>
+        
+        <section id="info">
+            <h2>ประวัติส่วนตัว</h2>
+            <p>สวัสดีครับ นี่คือเว็บไซต์ที่สร้างขึ้นเพื่อทดสอบทักษะ <span class="highlight">HTML และ CSS</span> เบื้องต้น</p>
+            
+            <img src="me.jpg" alt="รูปภาพของฉัน" width="200" />
 
-        <section id="about">
-            <h2>🌍 ข้อมูลเบื้องต้น</h2>
-
-            <img src="https://photos.google.com/share/AF1QipM589lBCSDqeQEv5rUwdBEjgwX53iBchyBu6n_1wby1BPCG8jfDH5v9j04IkIScTQ/photo/AF1QipMcD7vmwpPkLdRLHuLoKOXlSYvDjfYJKe76a4Oz?key=eHQxekw4WC1odGwzOEFGNDZJeEl4ZTY0R1dMdWZn" alt="รูปภาพโปรไฟล์ของ นรินทร์" class="profile-pic">
-
-            <p>
-                ยินดีที่ได้รู้จักครับ! ผมเป็นนักพัฒนาเว็บมือใหม่ที่มีความสนใจในเทคโนโลยีและการออกแบบเว็บไซต์ 
-            </p>
-        </section>
-
-        <section id="skills">
-            <h2>💡 ทักษะและความสามารถ</h2>
-
-            <h3>ทักษะทางเทคนิค (Tech Skills - <ul>)</h3>
+            <h2>เป้าหมายในการเรียน</h2>
+            <p>ฉันต้องการพัฒนาทักษะด้าน <span class="highlight">Web Development</span> เพื่อสร้างสิ่งที่น่าสนใจในอนาคต</p>
+            
             <ul>
-                <li>HTML5</li>
-                <li>JavaScript</li>
-                <li>Git/GitHub</li>
+                <li>ฝึกฝนทักษะ HTML</li>
+                <li>การตกแต่งด้วย CSS</li>
+                <li>การใช้งานทั้งสองเข้าด้วยกันอย่างราบลื่น</li>
             </ul>
-
-            <h3>ทักษะด้านภาษา (Language Skills - <ol>)</h3>
-            <ol>
-                <li>ภาษาไทย (ภาษาดี)</li>
-                <li>ภาษาอังกฤษ (ระดับดี)</li>
-            </ol>
-            
-            <p>
-                ฉันเชื่อว่าการเรียนรู้ไม่มีวันสิ้นสุด และมุ่งมั่นที่จะพัฒนาทักษะของตนเองอยู่เสมอเพื่อให้ทันกับความเปลี่ยนแปลงของโลกดิจิทัล
-            </p>
         </section>
 
-        <section id="portfolio">
-            <h2>📊 ตารางแสดงประสบการณ์</h2>
-            
+        <section>
             <table>
                 <thead>
                     <tr>
-                        <th>ปี</th>
-                        <th>ระดับการศึกษา</th>
-                        <th colspan="2">รายละเอียดโดยย่อ</th>
+                        <th colspan="2">ตารางทักษะคอมพิวเตอร์</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>2024</td>
-                        <td>จบการศึกษามัธยมศึกษาตอนปลาย</td>
-                        <td>โรงเรียนฮอดพิทยาคม</td>
-                        <td>แผนการเรียนคอมพิวเตอร์</td>
+                        <td>ภาษาโปรแกรม</td>
+                        <td>ระดับความถนัด</td>
                     </tr>
                     <tr>
-                        <td>2025</td>
-                        <td>เข้าศึกษาต่อในระดับอุดมศึกษา</td>
-                        <td>มหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา</td>
-                        <td>คณะวิศวะกรรมศาสตร์ สาขาซอฟต์แวร์</td>
+                        <td>HTML/CSS</td>
+                        <td>เริ่มต้น</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
         <section id="contact">
-            <h2>📧 ติดต่อฉัน</h2>
-            
-            <form action="#" method="POST">
-                <label for="name">ชื่อ-นามสกุล:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
-                
-                <label for="email">อีเมล:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                
-                <label for="message">ข้อความ:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-                
-                <input type="submit" value="ส่งข้อความ">
+            <h2>แบบฟอร์มติดต่อ</h2>
+            <form action="#">
+                <div>
+                    <label>ชื่อผู้ติดต่อ:</label>
+                    <input type="text" placeholder="ระบุชื่อของคุณ">
+                </div>
+                <div>
+                    <label>อีเมล:</label>
+                    <input type="email" placeholder="example@mail.com">
+                </div>
+                <div>
+                    <label>ข้อความเพิ่มเติม:</label>
+                    <textarea rows="4" placeholder="พิมพ์ข้อความที่นี่..."></textarea>
+                </div>
+                <button type="submit">ส่งข้อมูล</button>
             </form>
-
-            <hr>
-
-            <h3>🔗 Social Media Links</h3>
-            <ul>
-                <li>
-                    <a href="https://www.facebook.com/narin.jay.9/" target="_blank">Facebook</a>
-                </li>
-                <li>
-                    <a href="https://photos.google.com/share/AF1QipM589lBCSDqeQEv5rUwdBEjgwX53iBchyBu6n_1wby1BPCG8jfDH5v9j04IkIScTQ/photo/AF1QipMcD7vmwpPkLdRLHuLoKOXlSYvDjfYJKe76a4Oz?key=eHQxekw4WC1odGwzOEFGNDZJeEl4ZTY0R1dMdWZn" target="_blank">LinkedIn</a>
-                </li>
-            </ul>
         </section>
 
     </main>
-</body>
 
+    <footer>
+        <p align="center">
+            ติดตามฉันได้ที่: 
+            <a href="https://www.facebook.com/narin.jay.9" target="_blank">Facebook</a> | 
+            <a href="https://www.instagram.com/html.jay.ac.th/" target="_blank">Instagram</a>
+        </p>
+    </footer>
+
+    </body>
 </html>

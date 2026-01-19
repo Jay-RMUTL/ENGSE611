@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำตัวเอง</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ส่วนที่ 1: Header -->
+    <header>
+        <h1 id="main-header">นายนรินทร์ ไสวจำเนียรกุล</h1> <!-- ชื่อใน h1 (ข้อ 2) -->
+        <p>ยินดีต้อนรับเข้าสู่เว็บไซต์แนะนำตัว</p>
+    </header>
+
+    <!-- ส่วนที่ 2: เมนูนำทาง -->
+    <nav>
+        <a href="#about">เกี่ยวกับฉัน</a> |
+        <a href="#skills">ทักษะ</a> |
+        <a href="#contact">ติดต่อ</a>
+    </nav>
+
+    <!-- ใช้ Semantic Tag: main + section -->
+    <main>
+
+        <!-- ข้อ 3: รูปภาพ -->
+        <section id="about">
+            <h2>เกี่ยวกับฉัน</h2>
+            <img src="me.jpg" alt="รูปโปรไฟล์ของฉัน" width="250">
+            <p>สวัสดีครับ ผมเป็นนักศึกษาที่กำลังเรียน <span class="highlight">พื้นฐานการสร้างเว็บไซต์ด้วย HTML และ CSS</span></p>
+        </section>
+
+        <!-- ข้อ 4: h2 + p ชุดที่ 2 -->
+        <section id="skills">
+            <h2>สิ่งที่สนใจ</h2>
+            <p>ผมสนใจการพัฒนาเว็บไซต์ การออกแบบ และเทคโนโลยีใหม่ๆ</p>
+
+            <!-- ข้อ 5: List -->
+            <h3>ทักษะพื้นฐาน</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS เบื้องต้น</li>
+                <li>การใช้งาน GitHub</li>
+            </ul>
+        </section>
+
+        <!-- ข้อ 6: ตารางแบบมี colspan หรือ rowspan -->
+        <section>
+            <h2>ตารางข้อมูลการเรียนรู้</h2>
+
+            <table border="1" cellpadding="8">
+                <tr>
+                    <th>หัวข้อ</th>
+                    <th>รายละเอียด</th>
+                    <th>สถานะ</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">HTML</td>
+                    <td>เข้าใจโครงสร้าง HTML</td>
+                    <td>กำลังเรียน</td>
+                </tr>
+                <tr>
+                    <td colspan="2">ฝึกเขียนหน้าเว็บจริง</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ข้อ 7: ฟอร์ม 3 ช่อง -->
+        <section id="contact">
+            <h2>ติดต่อฉัน</h2>
+
+            <!-- comment 1: ฟอร์มนี้ยังไม่เชื่อมฐานข้อมูล -->
+            <form>
+                <label>ชื่อ:</label>
+                <input type="text" placeholder="กรอกชื่อของคุณ">
+
+                <br><br>
+
+                <label>อีเมล:</label>
+                <input type="email" placeholder="example@mail.com">
+
+                <br><br>
+
+                <label>ข้อความถึงฉัน:</label><br>
+                <textarea rows="4" cols="30"></textarea>
+
+                <br><br>
+                <button type="submit">ส่งข้อความ</button>
+            </form>
+        </section>
+
+        <!-- ข้อ 8: ลิงก์ Social Media -->
+        <section>
+            <h2>โซเชียลมีเดีย</h2>
+            <p>
+                <a href="https://www.facebook.com/narin.jay.9/" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/html.jay.ac.th/" target="_blank">Instagram</a>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- semantic: footer -->
+    <footer>
+        <!-- comment 2: ส่วนท้ายของหน้าเว็บไซต์ -->
+        <p>© 2025 เว็บไซต์แนะนำตัวของฉัน</p>
+    </footer>
+
+</body>
+</html>

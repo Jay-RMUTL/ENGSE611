@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab CSS Grid</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Grid layout */
+        .container {
+            display: grid;
+            grid-template-columns: 25% 75%;
+            min-height: 100vh;
+        }
+
+        .menu {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #ecf0f1;
+            padding: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="menu">
+        <h2>เมนู</h2>
+        <ul>
+            <li>หน้าแรก</li>
+            <li>เกี่ยวกับเรา</li>
+            <li>ติดต่อ</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>เนื้อหา</h1>
+        <p>
+            นี่คือพื้นที่แสดงเนื้อหาหลักของเว็บไซต์  
+            เมื่อหน้าจอเล็กกว่า 600px layout จะเปลี่ยนเป็นคอลัมน์เดียว
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

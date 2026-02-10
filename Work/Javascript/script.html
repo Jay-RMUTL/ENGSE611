@@ -1,8 +1,8 @@
 <button onclick="runDemo()">Run Code</button>
-<pre id="outputBox"></pre>
 
 <script>
-function runDemo() {
+  function runDemo() {
+    // ล้าง Console ทุกครั้งที่รัน เพื่อไม่ให้สับสนกับผลเก่า
     console.clear();
     const output = [];
 
@@ -24,15 +24,15 @@ function runDemo() {
     output.push("อายุใหม่: " + age);
     console.log("อายุใหม่:", age);
 
-    // เปลี่ยนค่า const (ตั้งใจให้ error)
+    // เปลี่ยนค่า const (จะ error แต่ดักจับใน catch)
     try {
-        universityName = 'มหาวิทยาลัยใหม่';
+      universityName = 'มหาวิทยาลัยใหม่'; // ทำให้เกิด TypeError
     } catch (e) {
-        output.push("Error: " + e.message);
-        console.error(e.message);
+      output.push("Error: " + e.message);
+      console.error(e.message); // แสดงใน Console เป็นสีแดง
     }
 
     // แสดงผลบนหน้าเว็บ
     document.getElementById("outputBox").textContent = output.join("\n");
-}
+  }
 </script>

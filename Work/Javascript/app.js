@@ -1,6 +1,9 @@
 function showMessage() {
-alert("สวัสดีจาก JavaScript!");
+  alert("สวัสดีจาก JavaScript!");
 }
-document.getElementById("btn").addEventListener("click", showMessage);
 
-console.log("สคริปต์ทำงานแล้ว") ;
+document
+  .getElementById("btn")
+  .addEventListener("click", showMessage);
+
+console.log("สคริปต์ทำงานแล้ว");

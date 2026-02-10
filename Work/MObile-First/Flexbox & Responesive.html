@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox กับ Responsive - ENGSE611</title>
+    <style>
+        /* ---  (Mobile First) --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* กล่องแม่ (Flex Container) */
+        .flex-container {
+            display: flex;
+            flex-direction: column; /* มือถือ */
+            gap: 15px;
+            background: #e9edf2;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* กล่องลูก (Item) */
+        .item {
+            background: #0f2557;
+            color: #ffffff;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        /* --- แท็บเล็ตขึ้นไป --- */
+        @media (min-width: 768px) {
+            .flex-container {
+                flex-direction: row;
+                flex-wrap: wrap;  
+            }
+
+            .item {
+                flex: 1 1 45%;     
+            }
+
+            .item:last-child {
+                flex: 1 1 100%;
+            }
+        }
+
+        /* --- คอมพิวเตอร์ขึ้นไป --- */
+        @media (min-width: 1024px) {
+            .flex-container {
+                flex-wrap: nowrap;  
+            }
+
+            .item, .item:last-child {
+                flex: 1;           
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Flexbox กับ Responsive</h1>
+
+    <div class="flex-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+    </div>
+
+</body>
+</html>

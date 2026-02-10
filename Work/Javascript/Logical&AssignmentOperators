@@ -1,0 +1,34 @@
+<pre id="output">ผลลัพธ์จะแสดงที่นี่...</pre>
+<button onclick="runOperators()">Run Code</button>
+<script>
+function runOperators() {
+    let output = [];
+
+    // 1)Arithmetic (คณิตศาสตร์)
+    let a =10; b = 3;
+    output.push("1) Arithmetic Operators:");
+    output.push("10 + 3 = " + (a + b));
+    output.push("10 - 3 = " + (a - b)); 
+    output.push("10 * 3 = " + (a * b));
+    output.push("10 / 3 = " + (a / b));
+    output.push("10 % 3 = " + (a % b));
+    output.push("-----------");
+    
+    // 2)Comparison (การเปรียบเทียบ)
+    output.push("2) Comparison");
+    output.push("5 > 3: " + (5 > 3));
+    output.push("5 == 5: " + (5 == 5));
+    output.push("5 === 5: " + (5 === 5));
+    output.push("-----------");
+
+    // 3)Logical (ตรรกะ)
+    output.push("3) Logical");
+    output.push("true && false: " + (true && false));
+    output.push("true || false: " + (true || false));
+    output.push("!true: " + (!true));
+    output.push("-----------");
+
+    // 4)Assignment (การกำหนดค่า)
+    let x = 10;
+    output.push("4) Assignment");
+    output.push("x = 10 : " + x);

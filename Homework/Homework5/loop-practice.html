@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop Practice</title>
+</head>
+<body>
+
+    <h2>ฝึกเขียน Loop (for)</h2>
+
+    <h3>1) แสดงเลข 0 ถึง maxNumber (คู่ / คี่)</h3>
+    <div id="output1"></div>
+
+    <h3>2) นับทีละ 2</h3>
+    <div id="output2"></div>
+
+    <h3>3) นับถอยหลังจาก 10 ถึง 0</h3>
+    <div id="output3"></div>
+
+    <script>
+        // 2. กำหนดค่า maxNumber
+        let maxNumber = 20;
+
+        let text1 = "";
+        let text2 = "";
+        let text3 = "";
+
+        // 3. แสดงเลข 0 ถึง maxNumber พร้อมบอก คู่ / คี่
+        for (let i = 0; i <= maxNumber; i++) {
+            if (i % 2 === 0) {
+                text1 += i + " (คู่)<br>";
+                console.log(i + " (คู่)");
+            } else {
+                text1 += i + " (คี่)<br>";
+                console.log(i + " (คี่)");
+            }
+        }
+
+        // 5.1 นับทีละ 2
+        for (let i = 0; i <= maxNumber; i += 2) {
+            text2 += i + "<br>";
+            console.log("นับทีละ 2:", i);
+        }
+
+        // 5.2 นับถอยหลังจาก 10 ถึง 0
+        for (let i = 10; i >= 0; i--) {
+            text3 += i + "<br>";
+            console.log("นับถอยหลัง:", i);
+        }
+
+        // 4. แสดงผลบนหน้าเว็บ
+        document.getElementById("output1").innerHTML = text1;
+        document.getElementById("output2").innerHTML = text2;
+        document.getElementById("output3").innerHTML = text3;
+    </script>
+
+</body>
+</html>

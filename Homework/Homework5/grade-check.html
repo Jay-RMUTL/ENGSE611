@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Check</title>
+</head>
+<body>
+
+    <h2>ระบบตรวจคะแนน</h2>
+    <div id="output"></div>
+
+    <script>
+        // 2. ประกาศตัวแปร score
+        let score = 49;   // ลองเปลี่ยนค่าเป็น 45, 62, 79, 88
+        let grade = "";
+        let status = "";
+
+        // 3. ตัดเกรด
+        if (score >= 80) {
+            grade = "เกรด A";
+        } else if (score >= 70) {
+            grade = "เกรด B";
+        } else if (score >= 60) {
+            grade = "เกรด C";
+        } else if (score >= 50) {
+            grade = "เกรด D";
+        } else {
+            grade = "เกรด F";
+        }
+
+        // 4. ตรวจสอบผ่าน / ไม่ผ่าน
+        if (score >= 50) {
+            status = "ผลสอบ: ผ่าน";
+        } else {
+            status = "ผลสอบ: ไม่ผ่าน";
+        }
+
+        // 5. แสดงผลบนหน้าเว็บ
+        document.getElementById("output").innerHTML =
+            "คะแนน: " + score + "<br>" +
+            grade + "<br>" +
+            status;
+
+        // แสดงผลใน Console
+        console.log("คะแนน:", score);
+        console.log("เกรด:", grade);
+        console.log(status);
+    </script>
+
+</body>
+</html>
